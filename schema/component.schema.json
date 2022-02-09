@@ -14,7 +14,7 @@
       "properties": {
         "_supportedLayout": {
           "type": "string",
-          "title": "Supported layout",
+          "title": "Obsługiwany układ",
           "default": "both",
           "enum": [
             "full-width",
@@ -27,7 +27,7 @@
         },
         "instruction": {
           "type": "string",
-          "title": "Instruction",
+          "title": "Instrukcja",
           "default": "",
           "_adapt": {
             "translatable": true
@@ -41,7 +41,7 @@
             "mp4": {
               "type": "string",
               "isObjectId": true,
-              "title": "MP4 source",
+              "title": "Źródło MP4",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "video"
@@ -50,7 +50,7 @@
             "ogv": {
               "type": "string",
               "isObjectId": true,
-              "title": "OGV source",
+              "title": "Źródło OGV",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "video"
@@ -59,7 +59,7 @@
             "webm": {
               "type": "string",
               "isObjectId": true,
-              "title": "WebM source",
+              "title": "Źródło WebM",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "video"
@@ -68,7 +68,7 @@
             "mp3": {
               "type": "string",
               "isObjectId": true,
-              "title": "MP3 source",
+              "title": "Źródło MP3",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "audio"
@@ -76,14 +76,14 @@
             },
             "source": {
               "type": "string",
-              "title": "External source",
-              "description": "Enter an external link, such as a YouTube URL",
+              "title": "Źródło zewnętrzne",
+              "description": "Wprowadź łącze zewnętrzne, np. adres URL YouTube",
               "default": ""
             },
             "type": {
               "type": "string",
-              "title": "External source type",
-              "description": "Select the external source type, for a YouTube link this would be 'video/youtube', and 'video/vimeo' for Vimeo",
+              "title": "Typ źródła zewnętrznego",
+              "description": "Wybierz typ źródła zewnętrznego, dla linku YouTube będzie to 'video/youtube', a dla Vimeo 'video/vimeo'.",
               "default": "",
               "enum": [
                 "",
@@ -95,8 +95,8 @@
             "poster": {
               "type": "string",
               "isObjectId": true,
-              "title": "Poster frame",
-              "description": "Image displayed before the video is played (except on Vimeo)",
+              "title": "Plakat ramki",
+              "description": "Obraz wyświetlany przed odtworzeniem filmu (z wyjątkiem Vimeo)",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "image"
@@ -104,19 +104,19 @@
             },
             "cc": {
               "type": "array",
-              "title": "Closed captions",
+              "title": "Napisy zamknięte",
               "items": {
                 "type": "object",
                 "properties": {
                   "srclang": {
                     "type": "string",
-                    "title": "Language code",
+                    "title": "Kod języka",
                     "default": ""
                   },
                   "src": {
                     "type": "string",
                     "isObjectId": true,
-                    "title": "WebVTT source",
+                    "title": "Źródło WebVTT",
                     "_backboneForms": {
                       "type": "Asset",
                       "media": "other"
@@ -129,8 +129,8 @@
         },
         "_setCompletionOn": {
           "type": "string",
-          "title": "Completion trigger",
-          "description": "Defines what media event should trigger completion of this component",
+          "title": "Wyzwalacz zakończenia",
+          "description": "Określa, jakie zdarzenie medialne powinno wywołać zakończenie działania tego komponentu",
           "default": "play",
           "enum": [
             "inview",
@@ -141,25 +141,25 @@
         },
         "_useClosedCaptions": {
           "type": "boolean",
-          "title": "Enable closed captions",
+          "title": "Włącz napisy zamknięte",
           "default": false
         },
         "_startLanguage": {
           "type": "string",
-          "title": "Initial closed captions language",
-          "description": "Select which closed caption language to display by default. Only required when closed captions are enabled and there are multiple languages",
+          "title": "Domyślny język napisów zamkniętych",
+          "description": "Wybierz język napisów zamkniętych, który ma być wyświetlany domyślnie. Wymagane tylko wtedy, gdy opcja Napisy zamknięte jest włączona i istnieje wiele języków.",
           "default": "en"
         },
         "_showVolumeControl": {
           "type": "boolean",
-          "title": "Show volume control (not supported on mobile)",
-          "description": "When enabled, the volume control will appear in the media player. On mobile devices the audio level is controlled the device's physical volume controls",
+          "title": "Pokaż regulację głośności (nieobsługiwane w mobilnych)",
+          "description": "Po włączeniu, regulator głośności pojawi się w odtwarzaczu multimedialnym. W urządzeniach mobilnych poziom dźwięku jest kontrolowany za pomocą fizycznych przycisków głośności urządzenia.",
           "default": false
         },
         "_startVolume": {
           "type": "string",
-          "title": "Default volume (not supported on mobile)",
-          "description": "Defines the default volume. On mobile devices the audio level is under the user's physical control",
+          "title": "Głośność domyślna (nieobsługiwane w mobilnych)",
+          "description": "Określa domyślną głośność. W urządzeniach mobilnych poziom dźwięku jest pod fizyczną kontrolą użytkownika.",
           "default": "80%",
           "enum": [
             "0%",
@@ -178,12 +178,12 @@
         },
         "_allowFullScreen": {
           "type": "boolean",
-          "title": "Allow full screen",
+          "title": "Zezwalaj na pełny ekran",
           "default": false
         },
         "_aspectRatio": {
           "type": "string",
-          "title": "Aspect ratio",
+          "title": "Współczynnik kształtu",
           "default": "landscape",
           "enum": [
             "landscape",
@@ -194,44 +194,44 @@
         },
         "_pauseWhenOffScreen": {
           "type": "boolean",
-          "title": "Pause playback when no longer in view",
+          "title": "Wstrzymanie odtwarzania, gdy nie jest już widoczne",
           "default": false
         },
         "_playsinline": {
           "type": "boolean",
-          "title": "Play videos inline on iOS",
-          "description": "If enabled, videos will play 'inline' on iPhones (the same way they do on iPads). Note that this feature is only available in iOS10 and above",
+          "title": "Odtwarzanie filmów w trybie inline na iOS",
+          "description": "Jeśli funkcja ta jest włączona, filmy będą odtwarzane 'w linii' na iPhone'ach (tak samo jak na iPadach). Należy pamiętać, że ta funkcja jest dostępna tylko w systemie iOS10 i nowszych.",
           "default": false
         },
         "_preventForwardScrubbing": {
           "type": "boolean",
-          "title": "Attempt to prevent media scrubbing",
-          "description": "If enabled, will attempt to prevent users from skipping ahead in audio/video",
+          "title": "Próba zapobieżenia szerowaniu mediów",
+          "description": "Jeśli jest włączona, będzie próbowała uniemożliwić użytkownikom przeskakiwanie do przodu w audio/wideo.",
           "default": false
         },
         "_transcript": {
           "type": "object",
-          "title": "Transcript",
+          "title": "Transkrypcja",
           "default": {},
           "properties": {
             "_setCompletionOnView": {
               "type": "boolean",
-              "title": "Mark this component as complete when transcript is shown",
+              "title": "Oznacz ten komponent jako ukończony po wyświetleniu transkrypcji",
               "default": true
             },
             "_inlineTranscript": {
               "type": "boolean",
-              "title": "Enable inline transcript",
+              "title": "Włącz transkrypcję 'w linii'",
               "default": false
             },
             "_externalTranscript": {
               "type": "boolean",
-              "title": "Enable linked transcript file",
+              "title": "Włączenie podlinkowany plik transkrypcji",
               "default": false
             },
             "inlineTranscriptButton": {
               "type": "string",
-              "title": "Inline transcript open button label",
+              "title": "Etykieta przycisku otwierania transkrypcji 'w linii'",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -239,7 +239,7 @@
             },
             "inlineTranscriptCloseButton": {
               "type": "string",
-              "title": "Inline transcript close button label",
+              "title": "Etykieta przycisku zamykania transkrypcji 'w linii'",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -247,7 +247,7 @@
             },
             "inlineTranscriptBody": {
               "type": "string",
-              "title": "Inline transcript",
+              "title": "Transkrypcja 'w linii'",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -256,7 +256,7 @@
             },
             "transcriptLinkButton": {
               "type": "string",
-              "title": "Linked transcript file button label",
+              "title": "Etykieta przycisku podlinkowane pliku transkrypcji",
               "default": "",
               "_adapt": {
                 "translatable": true
@@ -265,7 +265,7 @@
             "transcriptLink": {
               "type": "string",
               "isObjectId": true,
-              "title": "Linked transcript file source",
+              "title": "Źródło pliku transkrypcji",
               "_backboneForms": {
                 "type": "Asset",
                 "media": "other"
@@ -275,8 +275,8 @@
         },
         "_playerOptions": {
           "type": "object",
-          "title": "Player options",
-          "description": "Optional object that can be used to customize the player",
+          "title": "Opcje odtwarzacza",
+          "description": "Opcjonalny obiekt, który może być użyty do dostosowania odtwarzacza",
           "default": {},
           "_backboneForms": {
             "type": "CodeEditor",

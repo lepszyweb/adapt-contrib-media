@@ -18,7 +18,7 @@
               "properties": {
                 "ariaRegion": {
                   "type": "string",
-                  "title": "ARIA region",
+                  "title": "Region ARIA",
                   "default": "Media player{{#any _transcript._inlineTranscript _transcript._externalTranscript}} and transcript{{/any}}.",
                   "_adapt": {
                     "translatable": true
@@ -26,8 +26,8 @@
                 },
                 "skipToTranscript": {
                   "type": "string",
-                  "title": "Skip to transcript",
-                  "default": "Skip to transcript",
+                  "title": "Skocz transkrypcji",
+                  "default": "Skocz transkrypcji",
                   "_adapt": {
                     "translatable": true
                   }
